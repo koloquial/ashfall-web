@@ -1,0 +1,25 @@
+.account-page {
+    min-height: calc(100vh - 75px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .auth-box {
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .auth-toggle {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .auth-toggle span {
+    color: var(--color-primary);
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  

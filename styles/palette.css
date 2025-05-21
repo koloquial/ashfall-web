@@ -1,0 +1,84 @@
+:root {
+  /* Base Colors - Dark Theme */
+  --color-background: #0e0e10;
+  --color-surface: #1a1a1d;
+  --color-elevation-1: #1f1f23;
+  --color-elevation-2: #26262b;
+  --color-border: #2c2c31;
+
+  /* Text */
+  --color-text: #e4e4e7;
+  --color-text-muted: #a1a1aa;
+  --color-text-subtle: #6b7280;
+  --color-text-inverse: #ffffff;
+
+  /* Feedback */
+  --color-danger: #ef4444;
+  --color-warning: #f59e0b;
+  --color-success: #22c55e;
+
+  /* Accent Colors */
+  --color-primary: #f97316;
+  --color-primary-hover: #fb923c;
+  --color-secondary: #8b5cf6;
+  --color-highlight: #fcd34d;
+
+  /* Inputs */
+  --color-input-bg: #1f1f23;
+  --color-input-border: #3f3f46;
+
+  /* Buttons */
+  --color-button-bg: var(--color-primary);
+  --color-button-hover: var(--color-primary-hover);
+  --color-button-text: var(--color-text-inverse);
+
+  /* Shadows */
+  --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.2);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme='light'] {
+  /* Base Colors - Light Theme */
+  --color-background: #f5f5f4;
+  --color-surface: #ffffff;
+  --color-elevation-1: #f9fafb;
+  --color-elevation-2: #f3f4f6;
+  --color-border: #d4d4d8;
+
+  /* Text */
+  --color-text: #18181b;
+  --color-text-muted: #52525b;
+  --color-text-subtle: #71717a;
+  --color-text-inverse: #ffffff;
+
+  /* Feedback */
+  --color-danger: #dc2626;
+  --color-warning: #d97706;
+  --color-success: #16a34a;
+
+  /* Accent Colors */
+  --color-primary: #ea580c;
+  --color-primary-hover: #fb923c;
+  --color-secondary: #7c3aed;
+  --color-highlight: #eab308;
+
+  /* Inputs */
+  --color-input-bg: #ffffff;
+  --color-input-border: #d4d4d8;
+
+  /* Buttons */
+  --color-button-bg: var(--color-primary);
+  --color-button-hover: var(--color-primary-hover);
+  --color-button-text: var(--color-text-inverse);
+
+  /* Shadows */
+  --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Global Defaults */
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition: background-color 0.3s, color 0.3s;
+}

@@ -1,0 +1,27 @@
+.loading-container {
+    min-height: calc(100vh - 75px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: var(--color-background);
+  }
+  
+  .pulsating-logo {
+    width: 120px;
+    animation: pulsate 1.5s infinite;
+  }
+  
+  @keyframes pulsate {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+      filter: brightness(0) invert(.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  

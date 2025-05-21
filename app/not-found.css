@@ -1,0 +1,54 @@
+.not-found-page {
+    min-height: calc(100vh - 75px);
+    background-image: url('http://localhost:4000/assets/backgrounds/not-found.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    backdrop-filter: brightness(1.1);
+    position: relative;
+  }
+
+  .not-found-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+    z-index: 0;
+  }
+  
+  .not-found-page > * {
+    z-index: 1;
+  }
+  
+  .not-found-page p {
+    font-size: 1rem;
+    color: #fff;
+
+  }
+
+  .whisper {
+    font-style: italic;
+    color: #fff;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    max-width: 420px;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    border-right: 2px solid #fff;
+    animation: blink 1s step-end infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
