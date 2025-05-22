@@ -37,6 +37,8 @@ export default function CardCatalogPage() {
       .catch(console.error);
   }, []);
 
+  console.log('CARDS:', JSON.stringify(cards))
+
   return (
     <div className="catalog">
       <div className="card-grid">
@@ -111,11 +113,14 @@ export default function CardCatalogPage() {
                       <div className="card-bar" key="abilities">
                         <div className="ability-grid">
                           <span className='card-label'>Abilities</span>
-                          {card.abilities.map((a, i) => (
-                            <div key={i} className='card-ability'>
-                              {a.keyword} {a.value}
-                            </div>
-                          ))}
+{card.abilities.map((a, i) => (
+  <div key={i} className='card-ability'>
+    {a.keyword}{" "}
+    {typeof a.value === 'object'
+      ? Object.entries(a.value).map(([k, v]) => `${k}: ${v}`).join(', ')
+      : a.value}
+  </div>
+))}
                         </div>
                       </div>
                     );
@@ -146,7 +151,6 @@ export default function CardCatalogPage() {
                         <div className="stat">{ICONS.attack} {card.stats?.attack}</div>
                         <div className="stat">{ICONS.block} {card.stats?.block}</div>
                         <div className="stat">{ICONS.health} {card.stats?.health}</div>
-                      
                     </div>
                   );
 
